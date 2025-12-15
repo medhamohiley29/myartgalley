@@ -1,1 +1,1 @@
-# myartgalley
+# myartgallery
