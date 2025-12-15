@@ -1,0 +1,750 @@
+
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --logo-font: 'Sacramento', cursive;
+    --text-color: #ffffff;
+    --dark-overlay: rgba(0, 0, 0, 0.45); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
+    color: var(--text-color);
+}
+
+.logo {
+    font-family: var(--logo-font);
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    
+    background: url('VK.jpg') no-repeat center center/cover;
+    filter: grayscale(100%); 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-overlay);
+    filter: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    color: var(--text-color);
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.main-headline {
+    font-family: var(--primary-font);
+    font-size: 1cm; 
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.separator-line {
+    width: 250px;
+    height: 1px;
+    background-color: var(--text-color);
+    margin: 0 auto 20px auto;
+    opacity: 0.7;
+}
+
+.sub-headline {
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.view-portfolio, .learn-more {
+    background-color: var(--text-color);
+    color: #000;
+}
+
+.view-portfolio:hover,
+.learn-more:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    .main-headline {
+        font-size: 8vw;
+    }
+    .custom-domain-btn {
+        display: none; 
+    }
+    .cta-buttons {
+        gap: 10px;
+    }
+}
+
+.category-section {
+    width: 100%;
+     background: black;
+}
+
+.block-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    width: 100%;
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.block {
+    position: relative;
+    flex-grow: 1; 
+    max-width: 33.33%; 
+    height: 70vh; 
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none; 
+    display: block;
+}
+
+.block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease-in-out; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+    transition: background-color 0.6s ease-in-out; 
+}
+
+.block-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 2.2vw; 
+    font-weight: 700;
+    text-align: center;
+    z-index: 2; 
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
+}
+
+.block:hover img {
+    transform: scale(1.08); 
+}
+
+.block:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 1024px) {
+    .block-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .block {
+        max-width: 100%; 
+        height: 350px; 
+    }
+    .block-title {
+        font-size: 28px;
+    }
+}
+
+.content-section {
+    display: flex; 
+    min-height: 100vh; 
+    width: 100%;
+}
+
+.left-half {
+    flex: 1; 
+    background: url('Still.jpg') no-repeat center center/cover;
+}
+
+.right-half {
+    flex: 1; 
+    background-color: #1a1a1a;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 0 5%; 
+    max-width: 50%; 
+    position: relative;
+}
+
+.greeting {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.main-title {
+    font-size: 3.5vw; 
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    max-width: 550px; 
+}
+
+.find-out-more-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #fff;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.find-out-more-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+@media (max-width: 992px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .left-half, .right-half {
+        width: 100%; 
+        max-width: 100%;
+    }
+
+    .left-half {
+        min-height: 50vh; 
+    }
+
+    .right-half {
+        padding: 50px 5%;
+        min-height: auto;
+    }
+
+    .main-title {
+        font-size: 8vw; 
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 10vw;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .find-out-more-btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+.menu-price-list-start {
+    background-color: #1a1a1a; 
+    padding-top: 50px; 
+}
+
+.price-list-header-wrapper {
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 0 40px; 
+    margin-bottom: 50px; 
+}
+
+.section-title {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.header-separator {
+    border: 0;
+    height: 1px;
+    background-color: #333333; 
+    margin-top: 5px;
+    width: 100%;
+}
+
+
+.content-section { 
+    border-bottom: 5px solid #00bcd4; 
+}
+
+.price-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 40px;
+}
+
+.price-list-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.header-separator {
+    border: 0;
+    height: 1px;
+    background-color: #333333; 
+    margin-top: 5px;
+    width: 100%;
+}
+
+.category-section {
+    margin-bottom: 50px;
+}
+
+.main-category-heading {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.category-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaaaaa; 
+    margin-bottom: 40px; 
+}
+
+.item-listing {
+    padding: 20px 0 35px 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaaaaa; 
+    letter-spacing: 0.5px;
+}
+
+.item-listing:nth-child(3), 
+.item-listing:nth-child(4) { 
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+    .price-list-container {
+        padding: 50px 20px;
+    }
+    .main-category-heading {
+        font-size: 28px;
+    }
+    .item-name {
+        font-size: 18px;
+    }
+    .item-listing {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+    .item-price {
+        margin-top: 5px;
+    }
+}
+ 
+.contact-section {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+}
+
+.left-info {
+    flex: 1; /* Takes half the width */
+    background-color: #1a1a1a; 
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content within the left half */
+}
+
+.right-image {
+    flex: 1; 
+    background: url('Abstract.jpg') no-repeat center center/cover;
+}
+
+/* --- Header Styling --- */
+.contact-header {
+    max-width: 500px;
+    margin-bottom: 50px;
+    /* Adjust margin-top to position the header higher if needed */
+}
+
+.page-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.header-separator {
+    border: 0;
+    height: 1px;
+    background-color: #333333;
+    width: 100%;
+}
+
+/* --- Contact Details Styling --- */
+.contact-details {
+    max-width: 450px;
+    padding-top: 20px;
+}
+
+.sub-heading {
+    font-size: 24px;
+    font-weight: 600; /* Bolder than previous examples to match image */
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+}
+
+.info-label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.gallery-name {
+    margin-bottom: 0; 
+    padding-top: 25px;
+}
+
+.hours-text {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hours-text .fas {
+    font-size: 10px;
+    margin-bottom: 80px;
+}
+
+/* --- Button Styling --- */
+
+.whatsapp-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn .fab {
+    /* Use the official WhatsApp green color */
+    color: #25D366; 
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.drop-a-line-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    /* Increased margin for added space as requested previously */
+    margin-top: 80px; 
+    transition: background-color 0.3s;
+}
+
+/* Hover effects */
+.whatsapp-btn:hover,
+.drop-a-line-btn:hover {
+    background-color: #ccc;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .contact-section {
+        flex-direction: column; 
+    }
+
+    .left-info, .right-image {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .right-image {
+        min-height: 400px; 
+    }
+
+    .left-info {
+        padding: 40px 20px;
+    }
+}
+
+.site-footer {
+    background-color: #1a1a1a; 
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.social-section {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.social-title {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.social-separator {
+    border: 0;
+    height: 1px;
+    background-color: #333333;
+    width: 100%;
+}
+
+.social-icons {
+    margin: 30px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+.subscribe-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subscribe-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.subscribe-label {
+    font-family: 'Playfair Display', serif; 
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 400;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.subscribe-form {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #fff;
+}
+
+.email-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    background-color: #1a1a1a;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #aaaaaa; 
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.sign-up-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-up-btn:hover {
+    background-color: #ccc;
+}
+
+.discount-text {
+    font-size: 14px;
+    color: #aaaaaa; 
+    margin-bottom: 50px;
+}
+
+.bottom-text-section {
+    background-color: #000000; 
+    padding: 20px 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.coming-soon-text {
+    font-size: 16px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .subscribe-form-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .subscribe-label {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .subscribe-form {
+        max-width: 100%;
+    }
+}

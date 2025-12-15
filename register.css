@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: cyan;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background overlay */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("https://img.freepik.com/free-photo/vibrant-yellow-blue-waves-showcase-modern-creativity-generated-by-ai_188544-9593.jpg")
+              no-repeat center/cover;
+  filter: brightness(40%);
+  z-index: -1;
+}
+
+/* Login box */
+.login-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px 50px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.login-container h1 {
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+}
+
+.login-container input::placeholder {
+  color: #8c8c8c;
+}
+
+/* Buttons */
+.signin-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e5099c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.code-btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+/* OR separator */
+.or {
+  text-align: center;
+  margin: 15px 0;
+  color: #b3b3b3;
+}
+
+/* Links */
+.forgot {
+  display: block;
+  margin-top: 15px;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Signup text */
+.signup {
+  margin-top: 25px;
+  color: #b3b3b3;
+}
+
+.signup a {
+  color: white;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Captcha text */
+.captcha {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.captcha a {
+  color: #0071eb;
+  text-decoration: none;
+}
+
+.captcha a:hover {
+  text-decoration: underline;
+}
